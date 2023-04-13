@@ -8,15 +8,15 @@ const campo = document.querySelectorAll('.jogada div');
 let jogadas = [];
 let ultimaJogada;
 
-button[0].addEventListener('click', ()=>{jogo(0)});
-button[1].addEventListener('click', ()=>{jogo(1)});
-button[2].addEventListener('click', ()=>{jogo(2)});
-button[3].addEventListener('click', ()=>{jogo(3)});
-button[4].addEventListener('click', ()=>{jogo(4)});
-button[5].addEventListener('click', ()=>{jogo(5)});
-button[6].addEventListener('click', ()=>{jogo(6)});
-button[7].addEventListener('click', ()=>{jogo(7)});
-button[8].addEventListener('click', ()=>{jogo(8)});
+button[0].addEventListener('mousedown', ()=>{jogo(0)});
+button[1].addEventListener('mousedown', ()=>{jogo(1)});
+button[2].addEventListener('mousedown', ()=>{jogo(2)});
+button[3].addEventListener('mousedown', ()=>{jogo(3)});
+button[4].addEventListener('mousedown', ()=>{jogo(4)});
+button[5].addEventListener('mousedown', ()=>{jogo(5)});
+button[6].addEventListener('mousedown', ()=>{jogo(6)});
+button[7].addEventListener('mousedown', ()=>{jogo(7)});
+button[8].addEventListener('mousedown', ()=>{jogo(8)});
 
 button[0].addEventListener('mouseup', ()=>{alertaVitoria()});
 button[1].addEventListener('mouseup', ()=>{alertaVitoria()});
