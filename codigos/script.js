@@ -28,26 +28,6 @@ button[6].addEventListener('touchend', ()=>{alertaVitoria()});
 button[7].addEventListener('touchend', ()=>{alertaVitoria()});
 button[8].addEventListener('touchend', ()=>{alertaVitoria()});
 
-button[0].addEventListener('mousedown', ()=>{jogo(0)});
-button[1].addEventListener('mousedown', ()=>{jogo(1)});
-button[2].addEventListener('mousedown', ()=>{jogo(2)});
-button[3].addEventListener('mousedown', ()=>{jogo(3)});
-button[4].addEventListener('mousedown', ()=>{jogo(4)});
-button[5].addEventListener('mousedown', ()=>{jogo(5)});
-button[6].addEventListener('mousedown', ()=>{jogo(6)});
-button[7].addEventListener('mousedown', ()=>{jogo(7)});
-button[8].addEventListener('mousedown', ()=>{jogo(8)});
-
-button[0].addEventListener('mouseup', ()=>{alertaVitoria()});
-button[1].addEventListener('mouseup', ()=>{alertaVitoria()});
-button[2].addEventListener('mouseup', ()=>{alertaVitoria()});
-button[3].addEventListener('mouseup', ()=>{alertaVitoria()});
-button[4].addEventListener('mouseup', ()=>{alertaVitoria()});
-button[5].addEventListener('mouseup', ()=>{alertaVitoria()});
-button[6].addEventListener('mouseup', ()=>{alertaVitoria()});
-button[7].addEventListener('mouseup', ()=>{alertaVitoria()});
-button[8].addEventListener('mouseup', ()=>{alertaVitoria()});
-
 function verificarVitoria(matriz){
     // Verificação das horizontais
     if((matriz[0] === 'X' && matriz[1] === 'X' && matriz[2] === 'X') || (matriz[0] === 'O' && matriz[1] === 'O' && matriz[2] === 'O')){
