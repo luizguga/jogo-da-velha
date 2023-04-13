@@ -59,29 +59,23 @@ function alertaVitoria(){
 }
 
 function jogo(pos){
-    let vitoria = verificarVitoria(jogadas);
-    if(vitoria){
-        alert('Jogo terminado! Jogador '+'"'+ultimaJogada+'"'+' venceu!'+' Clique em "ok" para jogar novamente!');
-        document.location.reload(true);
-    }else{
-        if(jogadas[pos]){
-            alert("Espaço já preenchido!")
-        }else if(x.checked){
-            if(ultimaJogada === 'X'){
-                alert('Vez do jogador "O"!');
-            }else{
-                ultimaJogada = x.value
-                campo[pos].innerText = x.value
-                jogadas[pos] = x.value
-            }
+    if(jogadas[pos]){
+        alert("Espaço já preenchido!")
+    }else if(x.checked){
+        if(ultimaJogada === 'X'){
+            alert('Vez do jogador "O"!');
         }else{
-            if(ultimaJogada === 'O'){
-                alert('Vez do jogador "X"!');
-            }else{
-                ultimaJogada = o.value
-                campo[pos].innerText = o.value
-                jogadas[pos] = o.value
-            }
+            ultimaJogada = x.value
+            campo[pos].innerText = x.value
+            jogadas[pos] = x.value
+        }
+    }else{
+        if(ultimaJogada === 'O'){
+            alert('Vez do jogador "X"!');
+        }else{
+            ultimaJogada = o.value
+            campo[pos].innerText = o.value
+            jogadas[pos] = o.value
         }
     }
 };
