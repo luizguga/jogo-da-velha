@@ -44,7 +44,7 @@ function verificarVitoria(matriz){
 function jogo(pos){
     let vitoria = verificarVitoria(jogadas);
     if(vitoria){
-        alert('Jogo terminado! Jogador '+ultimaJogada+" venceu!");
+        alert('Jogo terminado! Jogador '+'"'+ultimaJogada+'"'+' venceu!'+' Clique em "ok" para jogar novamente!');
         document.location.reload(true);
     }else{
         if(jogadas[pos]){
