@@ -8,6 +8,26 @@ const campo = document.querySelectorAll('.jogada div');
 let jogadas = [];
 let ultimaJogada;
 
+button[0].addEventListener('touchstart', ()=>{jogo(0)});
+button[1].addEventListener('touchstart', ()=>{jogo(1)});
+button[2].addEventListener('touchstart', ()=>{jogo(2)});
+button[3].addEventListener('touchstart', ()=>{jogo(3)});
+button[4].addEventListener('touchstart', ()=>{jogo(4)});
+button[5].addEventListener('touchstart', ()=>{jogo(5)});
+button[6].addEventListener('touchstart', ()=>{jogo(6)});
+button[7].addEventListener('touchstart', ()=>{jogo(7)});
+button[8].addEventListener('touchstart', ()=>{jogo(8)});
+
+button[0].addEventListener('touchend', ()=>{alertaVitoria()});
+button[1].addEventListener('touchend', ()=>{alertaVitoria()});
+button[2].addEventListener('touchend', ()=>{alertaVitoria()});
+button[3].addEventListener('touchend', ()=>{alertaVitoria()});
+button[4].addEventListener('touchend', ()=>{alertaVitoria()});
+button[5].addEventListener('touchend', ()=>{alertaVitoria()});
+button[6].addEventListener('touchend', ()=>{alertaVitoria()});
+button[7].addEventListener('touchend', ()=>{alertaVitoria()});
+button[8].addEventListener('touchend', ()=>{alertaVitoria()});
+
 button[0].addEventListener('mousedown', ()=>{jogo(0)});
 button[1].addEventListener('mousedown', ()=>{jogo(1)});
 button[2].addEventListener('mousedown', ()=>{jogo(2)});
