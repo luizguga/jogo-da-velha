@@ -45,7 +45,7 @@ function jogo(pos){
     let vitoria = verificarVitoria(jogadas);
     if(vitoria){
         alert('Jogo terminado! Jogador '+ultimaJogada+" venceu!");
-        Location.reload(true);
+        document.location.reload(true);
     }else{
         if(jogadas[pos]){
             alert("Espaço já preenchido!")
