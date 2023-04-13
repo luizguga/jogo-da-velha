@@ -18,6 +18,16 @@ button[6].addEventListener('click', ()=>{jogo(6)});
 button[7].addEventListener('click', ()=>{jogo(7)});
 button[8].addEventListener('click', ()=>{jogo(8)});
 
+button[0].addEventListener('mouseup', ()=>{alertaVitoria()});
+button[1].addEventListener('mouseup', ()=>{alertaVitoria()});
+button[2].addEventListener('mouseup', ()=>{alertaVitoria()});
+button[3].addEventListener('mouseup', ()=>{alertaVitoria()});
+button[4].addEventListener('mouseup', ()=>{alertaVitoria()});
+button[5].addEventListener('mouseup', ()=>{alertaVitoria()});
+button[6].addEventListener('mouseup', ()=>{alertaVitoria()});
+button[7].addEventListener('mouseup', ()=>{alertaVitoria()});
+button[8].addEventListener('mouseup', ()=>{alertaVitoria()});
+
 function verificarVitoria(matriz){
     // Verificação das horizontais
     if((matriz[0] === 'X' && matriz[1] === 'X' && matriz[2] === 'X') || (matriz[0] === 'O' && matriz[1] === 'O' && matriz[2] === 'O')){
@@ -40,6 +50,13 @@ function verificarVitoria(matriz){
         return true;
     }
 };
+
+function alertaVitoria(){
+    if(verificarVitoria(jogadas)){
+        alert('O jogador '+'"'+ultimaJogada+'"'+' ganhou! Clique em "ok" para jogar novamente!');
+        document.location.reload(true);
+    }
+}
 
 function jogo(pos){
     let vitoria = verificarVitoria(jogadas);
