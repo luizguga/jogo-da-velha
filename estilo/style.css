@@ -34,10 +34,6 @@ p#escolha{
     height: 33.333%;
     border: 1px solid #0000002f;
 }
-
-#jogada4, #jogada5, #jogada6, #jogada7, #jogada8, #jogada9 {
-    margin-top: -3px;
-}
 .jogada:hover {
     background-color: #0000002f;
 }
