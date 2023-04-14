@@ -129,7 +129,7 @@ function alerta(texto){
     botao.style.display = 'block';
     botao.style.position = 'absolute';
     botao.style.padding = '10px 40px';
-    botao.style.border = '1px solid rgba(0,0,0,.3)';
+    botao.style.border = '2px solid rgba(0,0,0,.3)';
     botao.style.borderRadius = '10px';
     botao.style.top = '50%';
     botao.style.left = '50%';

@@ -9,6 +9,7 @@ body {
 }
 h1 {
     font-family: 'Press Start 2P', cursive;
+    line-height: 1.3em;
 }
 p#escolha{
     transform: scale(1.3);
