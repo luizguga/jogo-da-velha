@@ -51,12 +51,32 @@ function verificarVitoria(matriz){
     }
 };
 
-function alertaVitoria(){
-    if(verificarVitoria(jogadas)){
-        alert('O jogador '+'"'+ultimaJogada+'"'+' ganhou! Clique em "ok" para jogar novamente!');
-        document.location.reload(true);
+function verificarFim(matriz){
+    if(typeof(matriz[0]) === 'string' && typeof(matriz[1]) === 'string' && typeof(matriz[2]) === 'string' && typeof(matriz[3]) === 'string' && typeof(matriz[4]) === 'string' && typeof(matriz[5]) === 'string' && typeof(matriz[6]) === 'string' && typeof(matriz[7]) === 'string' && typeof(matriz[8]) === 'string'){
+        return true;
+    }else{
+        return false;
     }
-}
+};
+
+function alertaVitoria(){
+    let botao;
+    if(verificarVitoria(jogadas)){
+        alerta('O jogador '+'"'+ultimaJogada+'"'+' ganhou! Clique em "OK" para jogar novamente!');
+        botao = document.querySelector('div#botao');
+        botao.onclick = ()=>{
+            botao.style.borderColor = 'black';
+            document.location.reload(false);
+        }
+    }else if(verificarFim(jogadas)){
+        alerta('Deu velha! Clique em "ok" para jogar novamente!');
+        botao = document.querySelector('div#botao');
+        botao.onclick = ()=>{
+            botao.style.borderColor = 'black';
+            document.location.reload(false);
+        }
+    }
+};
 
 function jogo(pos){
     if(jogadas[pos]){
@@ -78,4 +98,42 @@ function jogo(pos){
             jogadas[pos] = o.value
         }
     }
+};
+
+function alerta(texto){
+    let janela = document.createElement('div');
+    janela.style.display = 'block';
+    janela.style.width = '100vw'
+    janela.style.height = '100vh'
+    janela.style.position = 'absolute';
+    janela.style.top = '50%';
+    janela.style.left = '50%';
+    janela.style.transform = 'translate(-50%,-50%)';
+    janela.style.backgroundColor = 'rgba(255,255,255,0.95)';
+    janela.style.fontFamily = '\'Press Start 2P\', cursive';
+    document.body.appendChild(janela);
+
+    let mensagem = document.createElement('p');
+    mensagem.innerText = texto;
+    mensagem.style.position = 'absolute';
+    mensagem.style.top = '35%';
+    mensagem.style.left = '50%';
+    mensagem.style.transform = 'translate(-50%,-50%)'
+    mensagem.style.width = '70%';
+    mensagem.style.lineHeight = '1.3em';
+    janela.appendChild(mensagem);
+
+    let botao = document.createElement('div');
+    botao.setAttribute('id', 'botao');
+    botao.innerText = 'OK';
+    botao.style.display = 'block';
+    botao.style.position = 'absolute';
+    botao.style.padding = '10px 40px';
+    botao.style.border = '1px solid rgba(0,0,0,.3)';
+    botao.style.borderRadius = '10px';
+    botao.style.top = '50%';
+    botao.style.left = '50%';
+    botao.style.transform = 'translate(-50%,-50%)';
+    botao.style.fontFamily = '\'Press Start 2P\', cursive';
+    janela.appendChild(botao);
 };
