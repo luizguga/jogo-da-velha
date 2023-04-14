@@ -86,7 +86,14 @@ function jogo(pos){
             alert('Vez do jogador "O"!');
         }else{
             ultimaJogada = x.value
-            campo[pos].innerText = x.value
+
+            let spriteJogo = document.createElement('img');
+            spriteJogo.src = 'imagens/x.png';
+            spriteJogo.style.display = 'block';
+            spriteJogo.style.width = '100%';
+            spriteJogo.style.height = '100%';
+            campo[pos].appendChild(spriteJogo);
+            
             jogadas[pos] = x.value
         }
     }else{
@@ -94,7 +101,14 @@ function jogo(pos){
             alert('Vez do jogador "X"!');
         }else{
             ultimaJogada = o.value
-            campo[pos].innerText = o.value
+
+            let spriteJogo = document.createElement('img');
+            spriteJogo.src = 'imagens/circulo.png';
+            spriteJogo.style.display = 'block';
+            spriteJogo.style.width = '100%';
+            spriteJogo.style.height = '100%';
+            campo[pos].appendChild(spriteJogo);
+
             jogadas[pos] = o.value
         }
     }
