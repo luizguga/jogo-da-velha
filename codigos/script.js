@@ -142,7 +142,7 @@ function alertaVitoria(){
 };
 
 function jogo(pos){
-    if(jogadas[pos]){
+    if(typeof(jogadas[pos]) === 'string'){
         alert("Espaço já preenchido!");
     }else if(ultimaJogada === 'X'){
         let spriteJogo = document.createElement('img');
